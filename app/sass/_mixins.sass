@@ -1,0 +1,31 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// Image replacement
+
+@mixin img-replace($img, $w, $h, $disp: block)
+	background-image: url('#{$path}/#{$img}')
+	background-repeat: no-repeat
+	width: $w
+	height: $h
+	display: $disp
+
+
+// Media Queries
+
+@mixin mq($break)
+	@if $break == "small"
+		@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md)
+			@content
+	@else if $break == "medsmall"
+		@media (min-width: $breakpoint-ms) and (max-width: $breakpoint-md)
+			@content
+	@else if $break == "medium"
+		@media (min-width: $breakpoint-md + 1)
+			@content
+	@else if $break == "large"
+		@media (min-width: $breakpoint-lg)
+			@content
+	@else
+		@error "That's not a valid breakpoint value idiot"

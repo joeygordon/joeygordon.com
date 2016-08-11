@@ -1,0 +1,43 @@
+@import variables
+@import functions
+@import helpers
+@import mixins
+@import type
+
+
+///////////////////////////////////////////////
+// GENERAL SITE STUFF
+///////////////////////////////////////////////
+
+body
+	background-color: #D3B555
+	background-color: #FFF
+	margin: 0px
+	line-height: $base__line / $base__font-size
+	font-family: $font-family--primary
+	font-size: $base__font-size
+	color: black
+
+	@include mq(small)
+		font-size: 16px
+		line-height: 1.5
+
+img
+	max-width: 100%
+
+a
+	color: $color-primary
+	border-color: $color-primary
+
+.pro-tip
+	color: inherit
+	text-decoration: none
+	border-bottom: 1px dotted #999
+
+.tooltip
+	display: none
+
+
+@import 'header' 
+@import 'feature'
+@import 'skills'

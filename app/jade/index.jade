@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    
+    // Title
+    title Joey Gordon • iOS &amp;  Web Developer • Cookie Enthusiast
+
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    // build:css css/styles.min.css
+    link(rel="stylesheet", href="../bower_components/normalize-css/normalize.css")
+    link(rel="stylesheet", href="css/app.css")
+    // endbuild
+
+    // build:js js/app.min.js
+    script(src="../bower_components/jquery/dist/jquery.js")
+    script(src="../bower_components/jquery-color/jquery.color.js")
+    script(src="../bower_components/vivus/dist/vivus.js")
+    script(src="js/waypoints.js")
+    script(src="js/app.js")
+    // endbuild
+
+    script(src="https://use.fontawesome.com/c267bf2f4f.js")
+
+  body
+
+      include partials/_header.jade
+
+    .content
+
+      include partials/_feature.jade
+      include partials/_skills.jade
+      include partials/_projects.jade
