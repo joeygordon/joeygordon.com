@@ -33,7 +33,11 @@ $(function() {
 		  	}
 		  }
 	  });
-}
+	}
+
+	function contactAppear() {
+		$('.js-contact').addClass('appear');
+	}
 
 
 
@@ -42,7 +46,8 @@ $(function() {
       strings: ["Hi, my name is Joey Gordon. I like to build things for <strong>iOS</strong> and the <strong>web</strong>. I wear a lot of black, eat a lot of <strong>cookies</strong>, and enjoy Starbucks more than I probably should.*"],
       typeSpeed: 0,
       callback: function() {
-        scrollIt()
+      	contactAppear();
+        scrollIt();
       }
   });
   
