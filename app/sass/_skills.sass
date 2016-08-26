@@ -1,8 +1,11 @@
 .skills
-	padding:
-		top: 5em
-		bottom: 5em
+	background-color: white
 
+	.container
+		padding:
+			top: 5em
+			bottom: 5em
+		@extend %clearfix
 
 .bio-pic
 	background-color: #ddd
@@ -11,18 +14,35 @@
 	border-radius: $br--round
 	height: 12.5rem
 	width: 12.5rem
-	float: left
-	margin-right: 2em
+	float: right
+	margin: 0.5em 0 1em 1.5em
 
 	@include mq(small)
 		float: none
 		margin: 0 auto
 
 
+.skills-container
+	background-color: rgba(black, 0.03)
+
+	h3
+		text-align: center
+
 .skill-list 
 	margin: 0 0 2em 0
 	padding: 0
+	// border-top: 1px solid #ddd
+	@extend %clearfix
 
 	li
-		display: inline-block
-		width: 32%
+		display: block
+		float: left
+		width: 32.3333%
+		padding: .5em 0
+		border-bottom: 2px solid #EFEFEF
+		text-align: center
+		background-color: white
+		margin: 0 0.5% 1%0.5%
+
+		&:nth-child(3)
+			// margin-right: 0
