@@ -1,5 +1,9 @@
 header
-	background-color: #ddd
+	background:
+		color: #ddd
+		image: url(../img/header.png)
+		size: cover
+		attachment: fixed
 	padding: 8em 0
 
 	.container
@@ -52,10 +56,14 @@ header
 	.chill
 		position: relative
 		z-index: 1
-		top: -3em
-		color: #999
+		top: -3.2em
 		opacity: 0
 		transition: opacity 500ms ease-in-out
+
+		span
+			background: #808080
+			padding: 5px 15px
+			color: #222
 
 	.chill.scrolled
 		opacity: 1
