@@ -5,7 +5,18 @@ $(function() {
   // Random website tricks
   /////////////////////////////////////////////
 
+  // dropnav state
   var dropped = false
+
+  // show photo tooltip
+  $('.camera').hover(
+  	function() {
+  		$('.photo-cred .tooltip').addClass('hovered');
+  	},
+  	function() {
+  		$('.photo-cred .tooltip').removeClass('hovered');
+  	}
+  );
 
   // header scrolling magic
   function scrollIt() {
