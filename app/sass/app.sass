@@ -28,13 +28,50 @@ a
 	color: $color-primary
 	border-color: $color-primary
 
+.cta
+	display: inline-block
+	position: relative
+	text-decoration: none
+	opacity: 0
+	transition: all 500ms ease-in-out
+
+.cta.appear
+	opacity: 1
+
+.flexcontain
+	display: flex
+
+	span
+		color: white
+		background-color: black
+		font-size: 1.2rem
+		padding: 0 0.5rem
+		transition: all 150ms ease-in-out
+
+	&:hover span
+		background-color: $color-primary
+
+	span.icon
+		background-color: $color-primary
+		color: white
+		font-size: 1.2rem
+		padding: 0 0.6rem
+		transition: all 150ms ease-in-out
+
+	i
+		color: white
+		transition: all 150ms ease-in-out
+
+	&:hover i
+		color: black
+
 .container
 	width: 70%
 	margin:
 		left: auto
 		right: auto
 
-
+@import 'dropnav'
 @import 'header' 
 @import 'feature'
 @import 'skills'

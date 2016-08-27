@@ -5,6 +5,7 @@ $(function() {
   // Random website tricks
   /////////////////////////////////////////////
 
+  var dropped = false
 
   // header scrolling magic
   function scrollIt() {
@@ -16,6 +17,8 @@ $(function() {
 		  	var headTop = $('header').offset().top;
 		  	var offset = Math.max(0, wScroll/2 - 20);
 		  	var offset2 = Math.max(0, wScroll/3 - 20)
+
+		  	var skillsTop = $('.skills').offset().top;
 
 		  	$('.shadow').addClass('scrolled');
 
@@ -31,6 +34,16 @@ $(function() {
 		  		$('.shadow').removeClass('scrolled');
 		  		$('.chill').removeClass('scrolled');
 		  	}
+
+		  	if (dropped == false) {
+			  	if (wScroll > (skillsTop -100)) {
+			  		showDropNav();
+			  	}
+			  } else {
+			  	if (wScroll < (skillsTop -100)) {
+			  		showDropNav();
+			  	}
+			  }
 		  }
 	  });
 	}
@@ -39,6 +52,11 @@ $(function() {
 		$('.js-contact').addClass('appear');
 	}
 
+
+	function showDropNav() {
+		dropped = !dropped;
+		$('.dropnav').slideToggle(200);
+	}
 
 
   // type out trigger
