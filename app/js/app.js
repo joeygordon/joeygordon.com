@@ -47,11 +47,11 @@ $(function() {
 		  	}
 
 		  	if (dropped == false) {
-			  	if (wScroll > (skillsTop -100)) {
+			  	if (wScroll > (skillsTop - 73)) {
 			  		showDropNav();
 			  	}
 			  } else {
-			  	if (wScroll < (skillsTop -100)) {
+			  	if (wScroll < (skillsTop - 73)) {
 			  		showDropNav();
 			  	}
 			  }
@@ -66,7 +66,7 @@ $(function() {
 
 	function showDropNav() {
 		dropped = !dropped;
-		$('.dropnav').slideToggle(200);
+		$('.dropnav').slideToggle(150);
 	}
 
 

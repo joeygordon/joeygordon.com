@@ -14,28 +14,34 @@ header
 		position: absolute
 
 	.info
-		font-size: 2.5rem
+		font-size: 2.4rem
+		line-height: 1.7
 		margin-bottom: .5em
 		position: relative
 		z-index: 3
+		font-family: $font-family--secondary
+		font-weight: bold
 
 		span
 			background-color: $color-primary
 			color: white
 			padding: 
-				left: 0.2em
-				right: 0.2em
+				left: 0.3em
+				right: 0.35em
+				top: 0.1em
 			box-decoration-break: clone;
 
 	strong
-		background-color: rgba(black, 0.5)
+		background-color: rgba(black, 0.3)
 		font-weight: normal
 		padding:
 			left: 0.1em
 			right: 0.1em
+			top: 0.1em
 
 	.shadow
-		font-size: 2.5rem
+		font-size: 2.4rem
+		line-height: 1.7
 		margin-bottom: .5em
 		position: absolute
 		z-index: 2
@@ -46,10 +52,17 @@ header
 		max-width: 850px
 		filter: blur(10px)
 		transition: opacity 800ms ease-in-out
+		font-family: $font-family--secondary
+		font-weight: bold
 
 		span
 			color: black
 			background-color: black
+			padding: 
+				left: 0.3em
+				right: 0.35em
+				top: 0.1em
+			box-decoration-break: clone;
 
 	p.scrolled
 		opacity: 0.2
@@ -60,6 +73,7 @@ header
 		top: -3.2em
 		opacity: 0
 		transition: opacity 500ms ease-in-out
+		font-family: $font-family--secondary
 
 		span
 			background: #808080
@@ -80,12 +94,13 @@ header
 	bottom: 1rem
 	right: 1rem
 	color: white
-	width: 50%
+	width: 80%
 
 	i
 		float: right
 		opacity: 0.8
 		font-size: 1.5rem
+		cursor: pointer
 
 	.tooltip
 		float: right
@@ -97,7 +112,7 @@ header
 		font-size: 0.8rem
 		color: #CCC
 		opacity: 0
-		transition: opacity 400ms ease-in-out
+		transition: opacity 200ms ease-in-out
 		border-radius: 4px
 
 		span
