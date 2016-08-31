@@ -5,6 +5,9 @@ $(function() {
   // Random website tricks
   /////////////////////////////////////////////
 
+  // fix image baseline
+  // $('.comp-view img').baseline(24); // Apply a 24px baseline to all images on the page
+
   // dropnav state
   var dropped = false
 
