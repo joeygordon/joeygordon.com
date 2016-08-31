@@ -1,22 +1,26 @@
 header
 	background:
-		color: #ddd
 		image: url(../img/header.png)
 		size: cover
 		attachment: fixed
+		repeat: no-repeat
 	padding: 8em 0
 	position: relative
 
+	p
+		margin-top: 1rem
+		margin-bottom: 1rem
+
 	.container
 		max-width: 850px
+		padding-bottom: .2rem
 
 	.headholder
 		position: absolute
 
 	.info
-		font-size: 2.4rem
-		line-height: 1.7
-		margin-bottom: .5em
+		font-size: 2.5rem
+		line-height: 1.8
 		position: relative
 		z-index: 3
 		font-family: $font-family--secondary
@@ -40,9 +44,10 @@ header
 			top: 0.1em
 
 	.shadow
-		font-size: 2.4rem
-		line-height: 1.7
-		margin-bottom: .5em
+		font-size: 2.5rem
+		line-height: 1.8
+		margin-top: 0.5em
+		margin-bottom: 0.5em
 		position: absolute
 		z-index: 2
 		opacity: 0
@@ -70,7 +75,7 @@ header
 	.chill
 		position: relative
 		z-index: 1
-		top: -3.2em
+		top: -3.5em
 		opacity: 0
 		transition: opacity 500ms ease-in-out
 		font-family: $font-family--secondary

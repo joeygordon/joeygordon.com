@@ -30,10 +30,11 @@ $(function() {
 		  	var offset2 = Math.max(0, wScroll/3 - 20)
 
 		  	var skillsTop = $('.skills').offset().top;
+		  	var headBottom = $('.feature').offset().top;
 
 		  	$('.shadow').addClass('scrolled');
 
-		  	if (wScroll > headTop) {
+		  	if (wScroll > headTop && wScroll < headBottom) {
 			  	$('.info').css({'transform': 'translate(0px, -'+ offset +'px)'});
 			  	$('.shadow').css({'transform': 'translate(0px, -'+ offset2 +'px)'});
 		  	}
