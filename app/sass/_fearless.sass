@@ -3,7 +3,16 @@
 	background:
 		color: rgba(black, 0.035)
 
+	@include mq(small)
+		width: 100%
+
 	.inside
 		margin-left: 10%
 		margin-right: 10%
 		max-width: 560px
+
+		@include mq(small)
+			float: none
+			margin: 0 10%
+			width: auto
+			max-width: 100%

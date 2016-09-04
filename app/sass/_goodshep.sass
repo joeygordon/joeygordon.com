@@ -1,7 +1,7 @@
 .project-goodshep
 	background: 
 		color: #333
-		image: linear-gradient(#333 60%, rgba(0, 0, 0, 0.02))
+		image: linear-gradient(#333 60%, rgba(0, 0, 0, 0.025))
 	color: white
 	@extend %clearfix
 
@@ -12,14 +12,29 @@
 		flex-direction: row-reverse
 		@extend %clearfix
 
+		@include mq(small)
+			flex-direction: column-reverse
+			width: 80%
+
 	.left-side
 		width: 55%
 		margin-left: 0%
+		opacity: 0.1
 		background: 
 			image: url(../img/goodshep.png)
-			size: 90% auto
+			size: 87% auto
 			position: center center
 			repeat: no-repeat
+		transition: all 350ms ease-in-out
+
+		@include mq(small)
+			width: 100%
+			height: 400px
+			background-position: top center
+
+		&.at-scroll
+			background-size: 90% auto
+			opacity: 1
 
 	.right-side
 		width: 45%
@@ -29,6 +44,11 @@
 			bottom: 7.5rem
 			left: 0
 			right: 0
+
+		@include mq(small)
+			width: 100%
+			margin: 0
+			padding: 3rem 0
 
 	h2
 		color: white

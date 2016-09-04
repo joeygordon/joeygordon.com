@@ -2,12 +2,27 @@
 	display: flex
 	background: white
 
+	@include mq(small)
+		flex-direction: column
+		width: 100%
+
 	h3
 		margin-top: 6rem
 
 	.comp-view
+		opacity: 0.1
 		margin:
-			top: 6rem
+			top: 3.5rem
 			bottom: 6rem
-			left: -5%
-			right: -5%
+			left: -3%
+			right: -3%
+		transition: all 350ms ease-in-out
+
+		&.at-scroll
+			margin:
+				left: -5%
+				right: -5%
+			opacity: 1
+
+	.go-link
+		background-color: rgba(black, 0.3)

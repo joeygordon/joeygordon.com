@@ -1,13 +1,6 @@
 .project-rockem
 	background:
 		color: $color-primary
-		// image: linear-gradient($color-primary 60%, rgba(0, 0, 0, 0.01))
-	// background: 
-	// 	color: $color-primary
-	// 	image: url(../img/rockem-comp.png)
-	// 	size: 63% auto
-	// 	position: -30% center
-	// 	repeat: no-repeat
 	color: white
 	@extend %clearfix
 
@@ -18,14 +11,32 @@
 		display: flex
 		@extend %clearfix
 
+		@include mq(small)
+			flex-direction: column-reverse
+			width: 80%
+
 	.left-side
 		width: 53%
 		margin-right: 2%
+		opacity: 0.1
 		background: 
 			image: url(../img/rockem-comp.png)
-			size: 110% auto
+			size: 127% auto
 			position: right center
 			repeat: no-repeat
+		transition: all 350ms ease-in-out
+
+		@include mq(small)
+			width: 110%
+			height: 400px
+			margin: 0px -5%
+			background:
+				size: 100% auto
+				position: top center
+
+		&.at-scroll
+			background-size: 130% auto
+			opacity: 1
 
 	.right-side
 		width: 45%
@@ -36,8 +47,16 @@
 			left: 0
 			right: 0
 
+		@include mq(small)
+			width: 100%
+			max-width: 100%
+			padding: 3rem 0 3rem
+
 		p
 			margin-right: 10%
+
+			@include mq(small)
+			margin-right: 0
 
 	h2
 		color: white

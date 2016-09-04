@@ -83,8 +83,73 @@ $(function() {
   //       scrollIt();
   //     }
   // });
-  
+
+
+  /////////////////////////////////////////////
+  // Alllllll of the waypoints
+  /////////////////////////////////////////////
+
+  //rockem project
+  var rockemPoint = new Waypoint({
+    element: document.getElementById('js-rockem'),
+    handler: function(direction) {
+      if(direction == "down") {
+      	$('#js-rockem .left-side').addClass('at-scroll');
+        // $('#js-about-us .devices').animate({ top: -175, opacity: 1 }, {duration: 300, ease: "easeOutCirc"});
+      }else{
+      	$('#js-rockem .left-side').removeClass('at-scroll');
+      }
+    },
+    //when the top becomes visible
+    offset: function() {
+      return this.element.clientHeight + 100
+    }
+  });
+
+  //goodshep project
+  var shepPoint = new Waypoint({
+    element: document.getElementById('js-goodshep'),
+    handler: function(direction) {
+      if(direction == "down") {
+      	$('#js-goodshep .left-side').addClass('at-scroll');
+        // $('#js-about-us .devices').animate({ top: -175, opacity: 1 }, {duration: 300, ease: "easeOutCirc"});
+      }else{
+      	$('#js-goodshep .left-side').removeClass('at-scroll');
+      }
+    },
+    //when the top becomes visible
+    offset: function() {
+      return this.element.clientHeight 
+    }
+  });
+
+
+
+  //small projects
+  var smallPoint = new Waypoint({
+    element: document.getElementById('js-projects'),
+    handler: function(direction) {
+      if(direction == "down") {
+        $('#js-projects .comp-view').addClass('at-scroll');
+        // $('#js-about-us .devices').animate({ top: -175, opacity: 1 }, {duration: 300, ease: "easeOutCirc"});
+      }else{
+        $('#js-projects .comp-view').removeClass('at-scroll');
+      }
+    },
+    //when the top becomes visible
+    offset: function() {
+      return this.element.clientHeight - 600
+    }
+  });
+
+ 
+  /////////////////////////////////////////////
+  // Engage
+  /////////////////////////////////////////////
+
   contactAppear();
   scrollIt();
+
+
 
 });
