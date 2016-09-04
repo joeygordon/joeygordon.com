@@ -55,15 +55,15 @@ $(function() {
   		  		$('.chill').removeClass('scrolled');
   		  	}
 
-  		  	if (dropped == false) {
-  			  	if (wScroll > (skillsTop - 73)) {
-  			  		showDropNav();
-  			  	}
-  			  } else {
-  			  	if (wScroll < (skillsTop - 73)) {
-  			  		showDropNav();
-  			  	}
-  			  }
+  		  	// if (dropped == false) {
+  			  // 	if (wScroll > (skillsTop - 73)) {
+  			  // 		showDropNav();
+  			  // 	}
+  			  // } else {
+  			  // 	if (wScroll < (skillsTop - 73)) {
+  			  // 		showDropNav();
+  			  // 	}
+  			  // }
   		  }
       }
 	  });
@@ -106,7 +106,10 @@ $(function() {
         $('.shadow').removeClass('scrolled');
         $('.chill').removeClass('scrolled');
         beenscrolled = true
-        console.log("HANK")
+        showDropNav();
+        // console.log("HANK")
+      }else{
+        showDropNav();
       }
     },
     //when the top becomes visible
