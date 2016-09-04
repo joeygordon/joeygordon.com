@@ -11,6 +11,8 @@ $(function() {
   // dropnav state
   var dropped = false
 
+  var beenscrolled = false
+
   // show photo tooltip
   $('.camera').hover(
   	function() {
@@ -24,42 +26,46 @@ $(function() {
   // header scrolling magic
   function scrollIt() {
 	  $(window).scroll(function(){
-		  if($(this).scrollTop() > 1) {
-		  	var wScroll = $(this).scrollTop();
+
+      if(beenscrolled == false) {
+
+  		  if($(this).scrollTop() > 1) {
+  		  	var wScroll = $(this).scrollTop();
 
 
-		  	var headTop = $('header').offset().top;
-		  	var offset = Math.max(0, wScroll/2 - 20);
-		  	var offset2 = Math.max(0, wScroll/3 - 20)
+  		  	var headTop = $('header').offset().top;
+  		  	var offset = Math.max(0, wScroll/2 - 20);
+  		  	var offset2 = Math.max(0, wScroll/3 - 20)
 
-		  	var skillsTop = $('.skills').offset().top;
-		  	var headBottom = $('.feature').offset().top;
+  		  	var skillsTop = $('.skills').offset().top;
+  		  	var headBottom = $('.feature').offset().top;
 
-		  	$('.shadow').addClass('scrolled');
+  		  	$('.shadow').addClass('scrolled');
 
-		  	if (wScroll > headTop && wScroll < headBottom) {
-			  	$('.info').css({'transform': 'translate(0px, -'+ offset +'px)'});
-			  	$('.shadow').css({'transform': 'translate(0px, -'+ offset2 +'px)'});
-		  	}
+  		  	if (wScroll > headTop && wScroll < headBottom) {
+  			  	$('.info').css({'transform': 'translate(0px, -'+ offset +'px)'});
+  			  	$('.shadow').css({'transform': 'translate(0px, -'+ offset2 +'px)'});
+  		  	}
 
-		  	if (wScroll > headTop + 50) {
-		  		$('.shadow').addClass('scrolled');
-		  		$('.chill').addClass('scrolled');
-		  	}else{
-		  		$('.shadow').removeClass('scrolled');
-		  		$('.chill').removeClass('scrolled');
-		  	}
+  		  	if (wScroll > headTop + 50) {
+  		  		$('.shadow').addClass('scrolled');
+  		  		$('.chill').addClass('scrolled');
+  		  	}else{
+  		  		$('.shadow').removeClass('scrolled');
+  		  		$('.chill').removeClass('scrolled');
+  		  	}
 
-		  	if (dropped == false) {
-			  	if (wScroll > (skillsTop - 73)) {
-			  		showDropNav();
-			  	}
-			  } else {
-			  	if (wScroll < (skillsTop - 73)) {
-			  		showDropNav();
-			  	}
-			  }
-		  }
+  		  	if (dropped == false) {
+  			  	if (wScroll > (skillsTop - 73)) {
+  			  		showDropNav();
+  			  	}
+  			  } else {
+  			  	if (wScroll < (skillsTop - 73)) {
+  			  		showDropNav();
+  			  	}
+  			  }
+  		  }
+      }
 	  });
 	}
 
@@ -88,6 +94,27 @@ $(function() {
   /////////////////////////////////////////////
   // Alllllll of the waypoints
   /////////////////////////////////////////////
+
+
+  //bandjob project
+  var skillsPoint = new Waypoint({
+    element: document.getElementById('js-skills'),
+    handler: function(direction) {
+      if(direction == "down") {
+        $('.info').css({'transform': 'translate(0px, 0px)'});
+        $('.shadow').css({'transform': 'translate(0px, 0px)'});
+        $('.shadow').removeClass('scrolled');
+        $('.chill').removeClass('scrolled');
+        beenscrolled = true
+        console.log("HANK")
+      }
+    },
+    //when the top becomes visible
+    offset: function() {
+      return this.element.clientHeight
+    }
+  });
+
 
   //rockem project
   var rockemPoint = new Waypoint({
@@ -139,6 +166,23 @@ $(function() {
     //when the top becomes visible
     offset: function() {
       return this.element.clientHeight - 600
+    }
+  });
+
+  //header area
+  var headerPoint = new Waypoint({
+    element: document.getElementById('js-header'),
+    handler: function(direction) {
+      if(direction == "down") {
+        // console.log("going down");
+      }else{
+        beenscrolled = false
+        // console.log("at the top");
+      }
+    },
+    //when the top becomes visible
+    offset: function() {
+      return this.element.clientHeight - this.element.clientHeight
     }
   });
 
