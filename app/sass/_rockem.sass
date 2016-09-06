@@ -4,6 +4,9 @@
 	color: white
 	@extend %clearfix
 
+	@include mq(small)
+		overflow: hidden
+
 	.container
 		width: 100%
 		max-width: 100%
@@ -27,9 +30,9 @@
 		transition: all 350ms ease-in-out
 
 		@include mq(small)
-			width: 110%
+			width: 130%
 			height: 400px
-			margin: 0px -5%
+			margin: 0px -10% 0 -15%
 			background:
 				size: 100% auto
 				position: top center

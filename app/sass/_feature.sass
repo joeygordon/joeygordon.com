@@ -1,6 +1,9 @@
 .feature
 	background: $color-primary
 
+	@include mq(small)
+		overflow: hidden
+
 	h2
 		color: white
 
@@ -23,10 +26,11 @@
 		background-position: right bottom
 
 		@include mq(small)
-			width: 100%
+			width: 135%
 			height: 400px
-			margin: 0
+			margin: 0 -20%
 			background-size: auto 100%
+			background-position: bottom center
 
 	.rightside
 		width: 38%
