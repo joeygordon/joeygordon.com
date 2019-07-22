@@ -1,54 +1,54 @@
 .footer
-	background: #DDD
-	
-	.container
-		padding: 6rem 0
-		width: 90%
-		max-width: 1200px
-		display: flex
+  background: #DDD
 
-		@include mq(small)
-			width: 80%
-			flex-direction: column
+  .container
+    padding: 6rem 0
+    width: 90%
+    max-width: 1200px
+    display: flex
 
-	.left-side
-		width: 45%
-		margin-right: 10%
+    @include mq(small)
+      width: 80%
+      flex-direction: column
 
-		@include mq(small)
-			width: 100%
+  .left-side
+    width: 45%
+    margin-right: 10%
 
-	.right-side
-		@include mq(small)
-			h2
-				display: none
+    @include mq(small)
+      width: 100%
 
-	h2
-		color: black
+  .right-side
+    @include mq(small)
+      h2
+        display: none
+
+  h2
+    color: black
 
 
-	p
-		a
-			display: inline-block
-			background: black
-			color: white
-			text-decoration: none
-			padding:
-				left: 0.2em
-				right: 0.2em
+  p
+    a
+      display: inline-block
+      background: black
+      color: white
+      text-decoration: none
+      padding:
+        left: 0.2em
+        right: 0.2em
 
-			&:hover
-				background: $color-primary
+      &:hover
+        background: $color-primary
 
-	.contact-list
-		padding: 0
-		margin: 0
+  .contact-list
+    padding: 0
+    margin: 0
 
-		li
-			list-style: none
+    li
+      list-style: none
 
-		a
-			color: black
+    a
+      color: black
 
-			&:hover
-				color: $color-primary
+      &:hover
+        color: $color-primary

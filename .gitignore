@@ -36,4 +36,5 @@ bower_components/
 *.css.map
 build/
 dist/
+.cache
 npm-debug.log

@@ -1,65 +1,65 @@
 .project-rockem
-	background:
-		color: $color-primary
-	color: white
-	@extend %clearfix
+  background:
+    color: $color-primary
+  color: white
+  @extend %clearfix
 
-	@include mq(small)
-		overflow: hidden
+  @include mq(small)
+    overflow: hidden
 
-	.container
-		width: 100%
-		max-width: 100%
-		height: 100%
-		display: flex
-		@extend %clearfix
+  .container
+    width: 100%
+    max-width: 100%
+    height: 100%
+    display: flex
+    @extend %clearfix
 
-		@include mq(small)
-			flex-direction: column-reverse
-			width: 80%
+    @include mq(small)
+      flex-direction: column-reverse
+      width: 80%
 
-	.left-side
-		width: 53%
-		margin-right: 5%
-		opacity: 0.1
-		background: 
-			image: url(../img/rockem-comp.png)
-			size: 127% auto
-			position: right center
-			repeat: no-repeat
-		transition: all 350ms ease-in-out
+  .left-side
+    width: 53%
+    margin-right: 5%
+    opacity: 0.1
+    background:
+      image: url(../../static/img/rockem-comp.png)
+      size: 127% auto
+      position: right center
+      repeat: no-repeat
+    transition: all 350ms ease-in-out
 
-		@include mq(small)
-			width: 130%
-			height: 400px
-			margin: 0px -10% 0 -15%
-			background:
-				size: 100% auto
-				position: top center
+    @include mq(small)
+      width: 130%
+      height: 400px
+      margin: 0px -10% 0 -15%
+      background:
+        size: 100% auto
+        position: top center
 
-		&.at-scroll
-			background-size: 130% auto
-			opacity: 1
+    &.at-scroll
+      background-size: 130% auto
+      opacity: 1
 
-	.right-side
-		width: 45%
-		max-width: 600px
-		padding:
-			top: 6rem
-			bottom: 7.5rem
-			left: 0
-			right: 0
+  .right-side
+    width: 45%
+    max-width: 600px
+    padding:
+      top: 6rem
+      bottom: 7.5rem
+      left: 0
+      right: 0
 
-		@include mq(small)
-			width: 100%
-			max-width: 100%
-			padding: 3rem 0 3rem
+    @include mq(small)
+      width: 100%
+      max-width: 100%
+      padding: 3rem 0 3rem
 
-		p
-			margin-right: 10%
+    p
+      margin-right: 10%
 
-			@include mq(small)
-				margin-right: 0
+      @include mq(small)
+        margin-right: 0
 
-	h2
-		color: white
+  h2
+    color: white

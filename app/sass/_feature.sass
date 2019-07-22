@@ -1,50 +1,50 @@
 .feature
-	background: $color-primary
+  background: $color-primary
 
-	@include mq(small)
-		overflow: hidden
+  @include mq(small)
+    overflow: hidden
 
-	h2
-		color: white
+  h2
+    color: white
 
-	.container
-		width: 100%
-		max-width: 100%
-		display: flex
+  .container
+    width: 100%
+    max-width: 100%
+    display: flex
 
-		@include mq(small)
-			flex-direction: column-reverse
-			width: 80%
+    @include mq(small)
+      flex-direction: column-reverse
+      width: 80%
 
-	.leftside
-		width: 58%
-		margin-right: 5%
-		background:
-			image: url(../img/bandjob.png)
-			repeat: no-repeat
-			size: auto 90%
-		background-position: right bottom
+  .leftside
+    width: 58%
+    margin-right: 5%
+    background:
+      image: url(../../static/img/bandjob.png)
+      repeat: no-repeat
+      size: auto 90%
+    background-position: right bottom
 
-		@include mq(small)
-			width: 135%
-			height: 400px
-			margin: 0 -20%
-			background-size: auto 100%
-			background-position: bottom center
+    @include mq(small)
+      width: 135%
+      height: 400px
+      margin: 0 -20%
+      background-size: auto 100%
+      background-position: bottom center
 
-	.rightside
-		width: 38%
-		margin-right: 3%
-		color: white
-		padding: 6rem 0 7.5rem 
+  .rightside
+    width: 38%
+    margin-right: 3%
+    color: white
+    padding: 6rem 0 7.5rem
 
-		@include mq(small)
-			width: 100%
-			margin: 0
-			padding: 3rem 0
+    @include mq(small)
+      width: 100%
+      margin: 0
+      padding: 3rem 0
 
-		p
-			margin-right: 10%
+    p
+      margin-right: 10%
 
-			@include mq(small)
-				margin-right: 0
+      @include mq(small)
+        margin-right: 0
