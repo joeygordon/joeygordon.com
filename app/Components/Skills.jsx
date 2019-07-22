@@ -5,7 +5,7 @@ const Skills = () => (
     <div className="container">
       <div className="bio-pic" />
       <h2>The Story So Far</h2>
-      <p>I'm a 34 year-old developer living in Portland, Oregon. I have more than 15 years of experience building all sorts of internet things. I specialize in both iOS and Front-End Web Development. I have experience in both product and client work with clients such as Crayola, VICE, Warner Music Group, Live Nation, and Honda.</p>
+      <p>I'm a 36 year-old developer living in Portland, Oregon. I have more than 15 years of experience building all sorts of internet things. I specialize in both iOS and Front-End Web Development. I have experience in both product and client work with clients such as Crayola, VICE, Warner Music Group, Live Nation, and Honda.</p>
       <ul className="links">
         <li>
           <a href="https://twitter.com/JoeyDoom"><i className="fa fa-twitter" aria-hidden="true" /></a>
@@ -34,7 +34,6 @@ const Skills = () => (
           <li>Responsive Design</li>
           <li>Firebase</li>
           <li>Vue</li>
-          <li>Gulp</li>
           <li>React</li>
           <li>Wordpress</li>
           <li>Shopify</li>
