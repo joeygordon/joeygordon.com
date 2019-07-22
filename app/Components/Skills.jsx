@@ -14,7 +14,7 @@ const Skills = () => (
           <a href="https://github.com/JoeyDoom"><i className="fa fa-github" aria-hidden="true" /></a>
         </li>
         <li>
-          <a href="https://www.instagram.com/joeyaxe/"><i className="fa fa-instagram" aria-hidden="true" /></a>
+          <a href="https://www.instagram.com/joeygordon/"><i className="fa fa-instagram" aria-hidden="true" /></a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/joseph-gordon-01628b124"><i className="fa fa-linkedin" aria-hidden="true" /></a>
