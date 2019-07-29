@@ -5,7 +5,7 @@ const Skills = () => (
     <div className="container">
       <div className="bio-pic" />
       <h2>The Story So Far</h2>
-      <p>I'm a 36 year-old developer living in Portland, Oregon. I have more than 15 years of experience building all sorts of internet things. I specialize in both iOS and Front-End Web Development. I have experience in both product and client work with clients such as Crayola, VICE, Warner Music Group, Live Nation, and Honda.</p>
+      <p>I'm a 36 year-old developer living in Portland, Oregon. I have more than 15 years of experience building all sorts of internet things. I specialize in both iOS and modern Front-End Web Development. I have experience in both building products for <strong>Home Depot</strong> and client work with clients such as <strong>Crayola</strong>, <strong>VICE</strong>, <strong>Warner Music Group</strong>, <strong>Live Nation</strong>, and <strong>Honda</strong>.</p>
       <ul className="links">
         <li>
           <a href="https://twitter.com/JoeyDoom"><i className="fa fa-twitter" aria-hidden="true" /></a>
