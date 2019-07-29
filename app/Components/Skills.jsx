@@ -26,15 +26,15 @@ const Skills = () => (
       <div className="container">
         <h3 className="skillset">Skills &amp; Interests</h3>
         <ul className="skill-list">
-          <li>Swift</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Sass</li>
-          <li>JavaScript</li>
-          <li>Responsive Design</li>
-          <li>Firebase</li>
-          <li>Vue</li>
           <li>React</li>
+          <li>Swift</li>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Accessibility</li>
+          <li>Responsive Design</li>
+          <li>Google Cloud</li>
+          <li>Vue</li>
           <li>Wordpress</li>
           <li>Shopify</li>
           <li>Rails</li>
